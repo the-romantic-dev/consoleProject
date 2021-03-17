@@ -1,6 +1,7 @@
 package org.spbstu.yuryvalentinasov;
 
 import org.kohsuke.args4j.Argument;
+import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
@@ -23,7 +24,7 @@ public class CommandLineArgument {
         CmdLineParser parser = new CmdLineParser(this);
         try {
             parser.parseArgument(args);
-        } catch (Exception e) {
+        } catch (CmdLineException e) {
             System.out.println(e.getMessage());
         }
 
