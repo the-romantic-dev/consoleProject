@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="consoleProject_ciphxor.main:jar">
+  <artifact type="jar" build-on-make="true" name="consoleProject_ciphxor.main:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/consoleProject_ciphxor_main_jar</output-path>
     <root id="archive" name="consoleProject_ciphxor.main.jar">
       <element id="module-output" name="consoleProject_ciphxor.main" />

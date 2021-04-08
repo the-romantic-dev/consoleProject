@@ -47,12 +47,10 @@ public class MainTest {
     }
 
     @Test
-    void CmdLineExeptionsTest() throws URISyntaxException {
-        String inputFileName = "exeptionsTestInput.txt";
-        String outputFileName = "exeptionsTestOutput.txt";
+    void CmdLineExeptionsTest() throws URISyntaxException, IOException {
+        File inputFile = File.createTempFile("testInput-", ".txt");
+        File outputFile = File.createTempFile("testOutput-", ".txt");
         String incorrectFileName = "sdfawefadf.wwwda";
-        File inputFile = getFileFromResources(inputFileName);
-        File outputFile = getFileFromResources(outputFileName);
 
         String[] args1 = {"-c", "asdasd", inputFile.getAbsolutePath(), "-o", outputFile.getAbsolutePath()};
         String[] args2 = {inputFile.getAbsolutePath(), "-o", outputFile.getAbsolutePath()};

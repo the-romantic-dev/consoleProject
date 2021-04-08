@@ -32,16 +32,12 @@ public class CommandLineArgument {
     @Option(name = "-o", usage = "Set output file name")
     private File outputFile;
 
-    public File getOutputFile() {
+    public File getOutputFile() throws IOException {
         if (outputFile == null) {
             String outputFileName = inputFile.getName() + getFileExtension(inputFile);
             outputFile = new File(outputFileName);
         }
-        try {
-            outputFile.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        outputFile.createNewFile();
         return outputFile;
     }
 
